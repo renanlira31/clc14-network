@@ -2,7 +2,7 @@
 
 variable "vpc_name" {
   type    = string
-  default = "vpc-terraform-v2"
+  default = "vpc-terraform"
 }
 
 resource "aws_vpc" "minha_vpc" {
@@ -53,7 +53,7 @@ resource "aws_route_table" "priv_rt_1a" {
 
 
   tags = {
-    Name = "priv-rt-1A"
+    Name = "priv-rt-1a"
   }
 }
 
@@ -194,3 +194,4 @@ resource "aws_nat_gateway" "nat_gw_1b" {
   # on the Internet Gateway for the VPC.
   depends_on = [aws_internet_gateway.igw]
 }
+
